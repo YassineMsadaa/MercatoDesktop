@@ -16,6 +16,7 @@ public class Comment {
     private String body;
     private Date date;
     private int userId;
+    private int postId;
 
     public int getCommentId() {
         return commentId;
@@ -49,10 +50,21 @@ public class Comment {
         this.userId = userId;
     }
 
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
     @Override
     public String toString() {
-        return "comment{" + "commentId=" + commentId + ", body=" + body + ", date=" + date + ", userId=" + userId + '}';
+        return "Comment{" + "commentId=" + commentId + ", body=" + body + ", date=" + date + ", userId=" + userId + ", postId=" + postId + '}';
     }
+
+        
+    
 
     @Override
     public int hashCode() {
