@@ -16,7 +16,7 @@ public interface UserInterface {
     public void addUser(User u) ; 
     public void deleteUser(User u);
     public void modifyUser(User u);
-    public List<User> ShowAll();
+    public List<User> getAll();
     public User getUserById(int userId);
     public List<User> getUserByRole(String role);
     public List<User> getUserBySport(String sport);

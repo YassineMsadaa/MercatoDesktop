@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Post {
     private int postid;
-    private String titre;
+    private String title;
     private String body;
     private String image;
     private int userId;
@@ -28,12 +28,12 @@ public class Post {
         this.postid = postid;
     }
 
-    public String getTitre() {
-        return titre;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitre(String titre) {
-        this.titre = titre;
+    public void setTitle(String titre) {
+        this.title = title;
     }
 
     public String getBody() {
@@ -78,7 +78,7 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post{" + "postid=" + postid + ", titre=" + titre + ", body=" + body + ", image=" + image + ", userId=" + userId + ", creationDate=" + creationDate + ", modifDate=" + modifDate + '}';
+        return "Post{" + "postid=" + postid + ", title=" + title + ", body=" + body + ", image=" + image + ", userId=" + userId + ", creationDate=" + creationDate + ", modifDate=" + modifDate + '}';
     }
 
     @Override
@@ -103,6 +103,19 @@ public class Post {
             return false;
         }
         return true;
+    }
+
+    public Post() {
+    }
+
+    public Post(int postid, String title, String body, String image, int userId, Date creationDate, Date modifDate) {
+        this.postid = postid;
+        this.title = title;
+        this.body = body;
+        this.image = image;
+        this.userId = userId;
+        this.creationDate = creationDate;
+        this.modifDate = modifDate;
     }
     
     

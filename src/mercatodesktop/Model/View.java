@@ -86,6 +86,17 @@ public class View {
         }
         return true;
     }
+
+    public View() {
+    }
+
+    public View(int viewId, Date date, boolean viewed, int userId, int viewerId) {
+        this.viewId = viewId;
+        this.date = date;
+        this.viewed = viewed;
+        this.userId = userId;
+        this.viewerId = viewerId;
+    }
     
     
 }

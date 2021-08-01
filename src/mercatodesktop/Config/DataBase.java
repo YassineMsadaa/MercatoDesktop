@@ -13,27 +13,28 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author PC-Yassine
  */
 public class DataBase {
-     private String url;
-    private String login;
-    private String password;
+    private String url = "jdbc:mysql://localhost:3306/mercatodesktop";
+    private String login = "root";
+    private String password = "";
     private Connection connection;
-    private Properties properties;
     private static DataBase instance;
 
     private DataBase() throws FileNotFoundException, IOException {
+        
         try {
-            properties = new Properties();
-            properties.load(new FileInputStream(new File("configuration.properties")));
             connection = DriverManager.getConnection(url, login, password);
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
+            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     public Connection getConnection() {

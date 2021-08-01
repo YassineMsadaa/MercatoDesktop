@@ -18,21 +18,22 @@ public class User {
     private String email;
     private String password;
     private String name;
-    private String last_name;
+    private String lastName;
     private Date birthDate;
     private String birthPlace;
     private String gender;
     private String profile_pic;
     private String sponsorship;
-    private int solde;
+    private int balance;
     private String sport;
     private String jobStatus;
     private String healthStatus;
     private String resume;
-    private int hight;
+    private int height;
     private int weight;
     private String sportPosition;
-    private Date endDate;
+    private Date sponsorshipDate;
+    private Date spEndDate;
     
 
     public int getId() {
@@ -83,12 +84,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Date getBirthDate() {
@@ -131,12 +132,12 @@ public class User {
         this.sponsorship = sponsorship;
     }
 
-    public int getSolde() {
-        return solde;
+    public int getBalance() {
+        return balance;
     }
 
-    public void setSolde(int solde) {
-        this.solde = solde;
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
     public String getSport() {
@@ -171,12 +172,12 @@ public class User {
         this.resume = resume;
     }
 
-    public int getHight() {
-        return hight;
+    public int getHeight() {
+        return height;
     }
 
-    public void setHight(int hight) {
-        this.hight = hight;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public int getWeight() {
@@ -195,42 +196,55 @@ public class User {
         this.sportPosition = sportPosition;
     }
 
+    public Date getSponsorshipDate() {
+        return sponsorshipDate;
+    }
+
+    public void setSponsorshipDate(Date sponsorshipDate) {
+        this.sponsorshipDate = sponsorshipDate;
+    }
+
+    public Date getSpEndDate() {
+        return spEndDate;
+    }
+
+    public void setSpEndDate(Date spEndDate) {
+        this.spEndDate = spEndDate;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", username=" + username + ", roles=" + roles + ", email=" + email + ", password=" + password + ", name=" + name + ", lastName=" + lastName + ", birthDate=" + birthDate + ", birthPlace=" + birthPlace + ", gender=" + gender + ", profile_pic=" + profile_pic + ", sponsorship=" + sponsorship + ", balance=" + balance + ", sport=" + sport + ", jobStatus=" + jobStatus + ", healthStatus=" + healthStatus + ", resume=" + resume + ", height=" + height + ", weight=" + weight + ", sportPosition=" + sportPosition + ", sponsorshipDate=" + sponsorshipDate + ", spEndDate=" + spEndDate + '}';
+    }
+
     public User() {
     }
 
-    public User(int id, String username, String roles, String email, String password, String name, String last_name, Date birthDate, String birthPlace, String gender, String profile_pic, String sponsorship, int solde, String sport, String jobStatus, String healthStatus, String resume, int hight, int weight, String sportPosition) {
+    public User(int id, String username, String roles, String email, String password, String name, String lastName, Date birthDate, String birthPlace, String gender, String profile_pic, String sponsorship, int balance, String sport, String jobStatus, String healthStatus, String resume, int height, int weight, String sportPosition, Date sponsorshipDate, Date spEndDate) {
         this.id = id;
         this.username = username;
         this.roles = roles;
         this.email = email;
         this.password = password;
         this.name = name;
-        this.last_name = last_name;
+        this.lastName = lastName;
         this.birthDate = birthDate;
         this.birthPlace = birthPlace;
         this.gender = gender;
         this.profile_pic = profile_pic;
         this.sponsorship = sponsorship;
-        this.solde = solde;
+        this.balance = balance;
         this.sport = sport;
         this.jobStatus = jobStatus;
         this.healthStatus = healthStatus;
         this.resume = resume;
-        this.hight = hight;
+        this.height = height;
         this.weight = weight;
         this.sportPosition = sportPosition;
+        this.sponsorshipDate = sponsorshipDate;
+        this.spEndDate = spEndDate;
     }
 
-    @Override
-    public String toString() {
-        return "User{" + "id=" + id + ", username=" + username + ", roles=" + roles + ", email=" + email + ", password=" + password + ", name=" + name + ", last_name=" + last_name + ", birthDate=" + birthDate + ", birthPlace=" + birthPlace + ", gender=" + gender + ", profile_pic=" + profile_pic + ", sponsorship=" + sponsorship + ", solde=" + solde + ", sport=" + sport + ", jobStatus=" + jobStatus + ", healthStatus=" + healthStatus + ", resume=" + resume + ", hight=" + hight + ", weight=" + weight + ", sportPosition=" + sportPosition + ", endDate=" + endDate + '}';
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
 
     @Override
     public boolean equals(Object obj) {

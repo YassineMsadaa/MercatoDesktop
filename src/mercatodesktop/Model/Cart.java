@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -71,6 +71,15 @@ public class Cart {
     @Override
     public String toString() {
         return "Cart{" + "id=" + id + ", userId=" + userId + ", productId=" + productId + '}';
+    }
+
+    public Cart() {
+    }
+
+    public Cart(int id, int userId, int productId) {
+        this.id = id;
+        this.userId = userId;
+        this.productId = productId;
     }
     
     

@@ -5,6 +5,12 @@
  */
 package mercatodesktop.GUI;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import mercatodesktop.DAO.Class.UserService;
+import mercatodesktop.Model.User;
+
 /**
  *
  * @author PC-Yassine
@@ -15,7 +21,18 @@ public class MercatoDesktop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        try {
+            // TODO code application logic here
+            UserService us = new UserService();
+            User u = new User();
+            u.setName("yassouna");
+            System.out.println(u.toString());
+            us.addUser(u);
+            
+        } catch (IOException ex) {
+            Logger.getLogger(MercatoDesktop.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     
 }

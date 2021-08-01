@@ -114,6 +114,20 @@ public class Meeting {
         }
         return true;
     }
+
+    public Meeting() {
+    }
+    
+    public Meeting(int meetingId, int userIdManager, int userIdSportsman, String title, String body, Date date, Date creationDate, String Confirmation) {
+        this.meetingId = meetingId;
+        this.userIdManager = userIdManager;
+        this.userIdSportsman = userIdSportsman;
+        this.title = title;
+        this.body = body;
+        this.date = date;
+        this.creationDate = creationDate;
+        this.Confirmation = Confirmation;
+    }
     
     
 }

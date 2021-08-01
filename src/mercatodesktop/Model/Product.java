@@ -12,7 +12,7 @@ import java.sql.Date;
  * @author PC-Yassine
  */
 public class Product {
-    private int id;
+    private int productId;
     private String name;
     private float price;
     private String Description;
@@ -26,12 +26,12 @@ public class Product {
     private int userId;
     private int quantity;
 
-    public int getId() {
-        return id;
+    public int getProductd() {
+        return productId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setProductId(int id) {
+        this.productId = productId;
     }
 
     public String getName() {
@@ -132,7 +132,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "product{" + "id=" + id + ", name=" + name + ", price=" + price + ", Description=" + Description + ", Image1=" + Image1 + ", Image2=" + Image2 + ", Image3=" + Image3 + ", Image4=" + Image4 + ", date=" + date + ", state=" + state + ", pt=" + productType + ", userId=" + userId + ", quantity=" + quantity + '}';
+        return "product{" + "productId=" + productId + ", name=" + name + ", price=" + price + ", Description=" + Description + ", Image1=" + Image1 + ", Image2=" + Image2 + ", Image3=" + Image3 + ", Image4=" + Image4 + ", date=" + date + ", state=" + state + ", pt=" + productType + ", userId=" + userId + ", quantity=" + quantity + '}';
     }
 
     @Override
@@ -153,10 +153,29 @@ public class Product {
             return false;
         }
         final Product other = (Product) obj;
-        if (this.id != other.id) {
+        if (this.productId != other.productId) {
             return false;
         }
         return true;
+    }
+
+    public Product() {
+    }
+
+    public Product(int productId, String name, float price, String Description, String Image1, String Image2, String Image3, String Image4, Date date, String state, String productType, int userId, int quantity) {
+        this.productId = productId;
+        this.name = name;
+        this.price = price;
+        this.Description = Description;
+        this.Image1 = Image1;
+        this.Image2 = Image2;
+        this.Image3 = Image3;
+        this.Image4 = Image4;
+        this.date = date;
+        this.state = state;
+        this.productType = productType;
+        this.userId = userId;
+        this.quantity = quantity;
     }
     
     

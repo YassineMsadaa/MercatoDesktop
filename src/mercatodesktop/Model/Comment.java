@@ -89,6 +89,17 @@ public class Comment {
         }
         return true;
     }
+
+    public Comment() {
+    }
+
+    public Comment(int commentId, String body, Date date, int userId, int postId) {
+        this.commentId = commentId;
+        this.body = body;
+        this.date = date;
+        this.userId = userId;
+        this.postId = postId;
+    }
     
     
 }

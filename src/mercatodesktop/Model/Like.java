@@ -85,6 +85,17 @@ public class Like {
         }
         return true;
     }
+
+    public Like() {
+    }
+
+    public Like(int likeId, int userId, int commentId, int postId, boolean likeStatus) {
+        this.likeId = likeId;
+        this.userId = userId;
+        this.commentId = commentId;
+        this.postId = postId;
+        this.likeStatus = likeStatus;
+    }
     
     
 }

@@ -104,6 +104,19 @@ public class Reclamation {
         }
         return true;
     }
+
+    public Reclamation() {
+    }
+
+    public Reclamation(int recId, String title, String body, String subject, int userId, Date date, String problemeStatus) {
+        this.recId = recId;
+        this.title = title;
+        this.body = body;
+        this.subject = subject;
+        this.userId = userId;
+        this.date = date;
+        this.problemeStatus = problemeStatus;
+    }
     
     
 }
