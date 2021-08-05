@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" styleClass="mainFxmlClass" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mercatodesktop.GUI.HubController">
+    <children>
+      <ImageView fitHeight="750.0" fitWidth="1200.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0">
+         <image>
+            <Image url="@../Assets/Logos/backgroundfilter.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="83.0" fitWidth="383.0" layoutY="663.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/Logos/logo-mercato-name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="79.0" layoutX="361.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/Logos/logo-mercato-small.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="170.0" layoutX="1030.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/Logos/logo-mercato-name.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="paneNewsFeed" layoutX="243.0" layoutY="294.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="280.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="140.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Logos/newsfeed.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="7.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NEW'S FEED" wrappingWidth="185.2463836669922">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneProfils" layoutX="589.0" layoutY="314.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="280.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="140.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Logos/profiles.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="28.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILES" wrappingWidth="144.63462829589844">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneMeeting" layoutX="948.0" layoutY="300.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="280.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="140.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Assets/Logos/meeting.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="21.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEETINGS" wrappingWidth="157.93650503084064">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="paneMarketplace" layoutX="708.0" layoutY="544.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="544.0">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="140.0" layoutX="30.0" layoutY="20.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Assets/Logos/Marketplace.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="-9.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARKETPLACE" wrappingWidth="218.9999970793724">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="MyProfileMenu" layoutX="934.0" layoutY="-108.0" opacity="0.95" prefHeight="206.0" prefWidth="266.0" styleClass="monProfil">
+         <children>
+            <Button fx:id="buttonMyProfil" layoutX="13.0" layoutY="155.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="238.0" styleClass="buttonLogin" text="My Profile" textFill="#f2ffdd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="8.0" layoutY="150.0" prefHeight="5.0" prefWidth="245.0" />
+            <ImageView fx:id="PhotoMyProfil" fitHeight="64.0" fitWidth="69.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Assets/Logos/user.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nameLastNameMyProfile" layoutX="89.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailMyProfil" layoutX="89.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email@email.com" wrappingWidth="138.466552734375" />
+            <Text fill="#646464" layoutX="16.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="balanceMyProfil" fill="#646464" layoutX="80.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200 " wrappingWidth="112.819580078125">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="sponsorshipMyProfile" fill="#646464" layoutX="120.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sponsorship" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="11.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="8.0" layoutY="119.0" prefHeight="5.0" prefWidth="245.0" />
+            <Button fx:id="btnBalance" layoutX="3.0" layoutY="87.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button fx:id="btnSponsorship" layoutX="7.0" layoutY="119.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+         </children>
+      </Pane>
+      <Pane fx:id="viewmenu" layoutX="641.0" layoutY="-93.0" opacity="0.95" prefHeight="185.0" prefWidth="266.0" styleClass="monProfil" visible="false">
+         <children>
+            <Text fx:id="view1" fill="#646464" layoutX="64.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="view" wrappingWidth="131.8347087353468">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="11.0" layoutY="35.0" prefHeight="5.0" prefWidth="245.0" />
+            <Text fx:id="view2" fill="#646464" layoutX="62.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="view" wrappingWidth="138.46656116843224">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="9.0" layoutY="65.0" prefHeight="5.0" prefWidth="245.0" />
+            <Text fx:id="view3" fill="#646464" layoutX="62.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="view" wrappingWidth="138.46656116843224">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="9.0" layoutY="100.0" prefHeight="5.0" prefWidth="245.0" />
+            <Text fx:id="view4" fill="#646464" layoutX="62.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="view" wrappingWidth="131.19787320494652">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="9.0" layoutY="131.0" prefHeight="5.0" prefWidth="245.0" />
+            <Button fx:id="bview1" layoutX="4.0" layoutY="2.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button fx:id="bview2" layoutY="34.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button fx:id="bview3" layoutX="2.0" layoutY="69.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button fx:id="bview4" layoutY="100.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button fx:id="buttonViews" layoutX="14.0" layoutY="136.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="238.0" styleClass="buttonLogin" text="views" textFill="#f2ffdd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane prefHeight="100.0" prefWidth="1200.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenuProfile" layoutX="967.0" layoutY="18.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="userNameDDM" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="photoProfileDDM" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Assets/Logos/user.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fx:id="home" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Logos/logo-mercato-small.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="viewnotif" fitHeight="70.0" fitWidth="70.0" layoutX="839.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Assets/Logos/view.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane fx:id="PaneReclamation" layoutX="948.0" layoutY="666.0">
+         <children>
+            <ImageView fitHeight="77.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assets/Logos/reclamation.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="86.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECLAMATION" wrappingWidth="157.93650503084064">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+    
+    </children>
+</AnchorPane>

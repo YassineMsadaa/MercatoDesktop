@@ -1,0 +1,5 @@
+.back{
+    
+   -fx-background-image:url('../Assets/Logos/back.jpg');
+   -fx-background-size:cover;
+}

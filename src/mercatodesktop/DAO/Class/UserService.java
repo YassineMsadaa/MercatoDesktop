@@ -5,7 +5,6 @@
  */
 package mercatodesktop.DAO.Class;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,12 +23,9 @@ import mercatodesktop.Model.User;
  * @author PC-Yassine
  */
 public class UserService implements UserInterface{
-    
-    private Connection db;
 
-    public UserService() throws IOException {
-        this.db = DataBase.getInstance().getConnection();
-    }
+
+   private Connection db = DataBase.getInstance().getConnection();
 
     @Override
     public void addUser(User u) {

@@ -5,14 +5,12 @@
  */
 package mercatodesktop.Config;
 
-import java.io.File;
-import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,7 +25,7 @@ public class DataBase {
     private Connection connection;
     private static DataBase instance;
 
-    private DataBase() throws FileNotFoundException, IOException {
+    private DataBase() {
         
         try {
             connection = DriverManager.getConnection(url, login, password);
@@ -41,7 +39,7 @@ public class DataBase {
         return connection;
     }
 
-    public static DataBase getInstance() throws IOException {
+    public static DataBase getInstance() {
         if (instance == null) {
             instance = new DataBase();
         }
